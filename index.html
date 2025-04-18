@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stallaris-bot</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  const scrollElements = document.querySelectorAll('.scroll-fade, .final-bg');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  scrollElements.forEach(el => observer.observe(el));
+</script>
+
+<body>
+  <div class="hero">
+    <img src="blue)space.jpg" alt="Background" class="background-img">
+
+    <nav class="navbar">
+      <img src="Untitled.png" alt="Logo" class="logo">
+      <div class="nav-center">
+        <a href="#Starfall" class="nav-link">Starfall</a>
+        <a href="#About" class="nav-link">About</a>
+        <a href="#Blog" class="nav-link">Blog</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <h5>⎯⎯ Next Generation Of Explorer's</h5>
+      <h1>Set Out For The Stellar Nurseries And The Genesis Worlds Beyond!</h1>
+    </div>
+  </div>
+
+  <section id="Starfall">
+    <h5 class="section-heading">01 Starfall</h5>
+    <h2 class="section-title">What Level of Explorer's Are You?</h2>
+    <p class="section-content">
+      Hey voyagers of the void! I'm curious to know where you all stand in your cosmic knowledge. Are you a seasoned stargazer or just a celestial seedling. Pick up your equipment and let's explore through this vast space and time and even beyond.Look out for the signal we move at the Starfall. 
+    </p>
+  </section>
+
+  <section id="About">
+    <h5 class="section-heading">02 About</h5>
+    <h2 class="section-title">Whispers of My Story</h2>
+    <p class="section-content">
+      Greetings from India! I'm Sanchit Saini currently navigating my second year of B.Tech in Computer Science, and when I'm not immersed in the world of code, you'll most likely find me lost in the pages of a science fiction or fantasy novel. These imaginative realms have always held a special place for me. It's this very passion for the speculative and the wondrous that infuses this blog with its distinct sci-fi vibe, and I'm thrilled to have you on board my space ship.
+    </p>
+  </section>
+
+  <section id="Blog">
+    <h5 class="section-heading">03 Blog</h5>
+    <h2 class="section-title">when the Time First Whispered</h2>
+    <p class="section-content">
+      "The stars didn’t speak, but I listened anyway. Somewhere between space and time, I found the words I needed."
+      <br>
+      <br>
+      We all have thought about space many time's in our life and every time we do that the world around happens to pause. We think we know all about us and what we have to do in our life and what purpose it has but when we think of space we realise how insignificant we are. It's very nature that breaks our ego as a being is what makes it so facinating. Here we talk about this Google API powered bot named "STALLARIS" that i have created to talk about space. It contain all the possible information we as humans know about. I have given it that sci-fi kind of a character to take you out of this word and also retain the truth and facts. It can tell you all about the space and do not worry if you run out of ideas it can even suggest you new topics to explore. There are many topics where we dont even know exist out there. Talk a lot of "What If" and how your body will behave on different planets, what is whether condition like and how survival there would be like, What you will see when you will enter different celistial bodies. The bot also contain safty features to prevent unprofessional behaviour and stay in the desired line. I have given a sci-fi kind of a personality but have kept the temperature midium to keep it predictable for normal usage. It also retain the previous chat so do try to cross question if required.
+      <br>
+      Now lets see some responce from the bot, remember the image are not generated they are taken from the internet.
+    </p>
+  </section>
+  <section id="Starfall" class="image-text-section">
+    <div class="image-text-block">
+      <img src="supernova-blackhole.jpg" alt="Exploration Tech" class="block-image">
+      <div class="block-text">
+        <h3>Tell me about supernova black hole</h3>
+        <p>
+          "A supernova doesn't *create* a black hole directly, although it's often involved in their creation story.  A supernova is the explosive death of a massive star.  If that star is sufficiently massive (generally more than about 20 times the mass of our sun), the core's immense gravity after the explosion can overcome the outward pressure, collapsing under its own weight to form a black hole.  Therefore, a supernova is a *necessary event* in the creation of *some* black holes, not a black hole itself. The black hole is the *result* of the core collapse *following* the supernova. It's a dramatic end to a star's life, leading to one of the universe's most mysterious and powerful objects!"
+        </p>
+      </div>
+    </div>
+  
+    <div class="image-text-block reverse">
+      <img src="quasars.jpg" alt="Astronaut Training" class="block-image">
+      <div class="block-text">
+        <h3>Tell Me About Quasars</h3>
+        <p>
+          "Prepare for a mind-bending journey, space explorer! Quasars, ah, quasars...they are among the most luminous objects in the known universe. Imagine a supermassive black hole, billions of times the mass of our Sun, at the heart of a young galaxy.  As matter spirals into this behemoth, it gets incredibly heated and energized, releasing phenomenal amounts of energy across the electromagnetic spectrum –  from radio waves to X-rays.  This energy is what we see as a quasar, appearing as a point-like source of light, incredibly far from us. They are truly beacons from the early universe, offering invaluable insights into the formation and evolution of galaxies. "It's a far, far better thing that I do than I have ever done" -  we could say about the scientific revelations they give us.
+
+Want to delve deeper into the specifics of their energy output or the theories surrounding their formation?  Perhaps we could next explore the different types of quasars or their role in galactic evolution?"
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="final-section">
+    <div class="final-bg"></div>
+    <div class="final-paragraph">
+      <p>
+        This is part of the capstone project by Google-Kaggle 
+        <br>
+        Key take away from the cource that are implemented here
+        <br>
+        1. Advance prompt engineering and assigning the bot a role of space explorer and restricting it's response to space.
+        <br>
+        2. implementing security feature to stop the bot from answering in a unprofessional way.
+        <br>
+        3. Fine tuning the response according to myself (human feedback).
+        <br>
+      </p>
+    </div>
+  </section>
+  
+</body>
+</html>

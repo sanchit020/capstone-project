@@ -1,0 +1,244 @@
+/* styles.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Archivo', sans-serif;
+  color: white;
+  background-color: #070A1E;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 5rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 400px; /* increased for smoother transition */
+  background: linear-gradient(to bottom, rgba(7, 10, 30, 0) 0%, #070A1E 100%);
+  z-index: 1;
+}
+
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(0.6);
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 2;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #FBD784;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-content h5 {
+  color: #FBD784;
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  max-width: 700px;
+}
+
+.section-heading {
+  color: #FBD784;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.section-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+.image-text-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.image-text-block {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.image-text-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.block-image {
+  width: 50%;
+  border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.block-text {
+  width: 50%;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.block-text h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #FBD784;
+}
+
+.final-paragraph {
+  max-width: 900px;
+  margin: 5rem auto 2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  padding: 0 1rem;
+  opacity: 0.9;
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+}
+.final-section {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.final-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('frint2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeInBackground 3s ease-in forwards;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.final-paragraph {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: white;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeInBackground {
+  to {
+    opacity: 1;
+  }
+}
+/* Scroll fade class for any element */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.final-bg.visible {
+  opacity: 1;
+}
